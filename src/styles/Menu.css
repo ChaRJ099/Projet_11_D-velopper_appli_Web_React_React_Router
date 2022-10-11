@@ -1,0 +1,27 @@
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+    list-style-type: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF6060;
+}
+
+.menu-list-item {
+    margin-left: 55px;
+    position: relative;
+}
+
+.menu-list-item::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background-color: #FF6060;
+}
