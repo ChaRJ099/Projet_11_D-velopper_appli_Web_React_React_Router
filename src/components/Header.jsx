@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "../styles/Header.css";
 import "../styles/Menu.css";
 import Logo from "../assets/LOGO.png";
@@ -10,8 +11,12 @@ function Header() {
       </div>
       <nav className="menu">
         <ul className="menu-list">
-          <li className="menu-list-item">Accueil</li>
-          <li className="menu-list-item">A Propos</li>
+          <li className="menu-list-item">
+          <Link to="/">Accueil</Link>
+          </li>
+          <li className="menu-list-item">
+          <Link to="/Apropos">A Propos</Link>
+          </li>
         </ul>
       </nav>
     </header>);

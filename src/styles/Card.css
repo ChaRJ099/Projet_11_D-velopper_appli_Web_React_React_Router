@@ -1,17 +1,8 @@
-.cards-container {
-    margin: 0, 55px, 0, 55px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    /* gap: 50px;  */
-}
-
 .card {
     background: linear-gradient(rgba(255, 96, 96, 1), rgba(0, 0, 0, 0.5));
     border-radius: 10px;
-    width: 320px;
-    height: 320px;
+    width: 340px;
+    height: 340px;
 }
 
 .card-img {

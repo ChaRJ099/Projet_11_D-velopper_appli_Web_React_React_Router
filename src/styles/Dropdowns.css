@@ -1,0 +1,12 @@
+.dropdown {
+    width: 800px;
+    height: 50px;
+    background-color: black;
+}
+
+.dropdown-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}

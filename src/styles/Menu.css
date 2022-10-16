@@ -16,6 +16,16 @@
     position: relative;
 }
 
+.menu-list-item a:link {
+    text-decoration: none;
+    color: #FF6060
+}
+
+.menu-list-item a:visited {
+    text-decoration: none;
+    color: #FF6060
+}
+
 .menu-list-item::before {
     content: "";
     height: 2px;
@@ -24,4 +34,20 @@
     top: 32px;
     left: 0;
     background-color: #FF6060;
+}
+
+@media screen and (max-width: 375px){
+    .menu-list {
+        font-size: 12px;
+    }
+
+    .menu-list-item {
+        margin-left: 25px;
+    }
+
+    .menu-list-item::before {
+        height: 1px;
+        top: 18px;
+    }
+    
 }

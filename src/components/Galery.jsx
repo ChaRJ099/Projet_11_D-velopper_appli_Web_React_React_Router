@@ -31,12 +31,9 @@ function Galery() {
 
     return (
       <section className="gallerie">
-        <h2>Gallerie</h2>
-        <div className='cards-container'>
           {galeries.map((galerie, index)=> {
             return  <Card title={galerie.title} key={index}/>
           })}
-        </div>
       </section>
     );
 }
