@@ -5,9 +5,10 @@
     flex-direction: row;
     max-width: 1240px;
     width: 100%;
+    margin: 40px 0 63px 0;
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 580px){
     .header-group {
         width: 335px;
         margin-bottom: 20px;

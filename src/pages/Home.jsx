@@ -10,7 +10,6 @@ function Home() {
   
   const [bannerUrl] = useState([]);
 
-
   return (    
       <div className="home">
         <Header />
