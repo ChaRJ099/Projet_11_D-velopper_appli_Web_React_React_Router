@@ -1,8 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import { Link } from 'react-router-dom';
-
+import '../styles/Errorpage.css';
 import Header from '../components/Header';
-import ErrorImg from '../assets/404.png';
 
 
 function ErrorPage() {
@@ -10,13 +9,13 @@ function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
+    <div className="error-page">
       <Header />
-      <div className="logo">
-        <img src={ErrorImg} alt="erreur 404" />
-      </div>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
-      <p><Link to="/">Retourner sur la page d’accueil</Link></p>
+      <div className="error-num-container">
+        <span className="error-num">404</span>
+      </div>      
+      <span className="error-msg">Oups ! La page que vous demandez n'existe pas.</span>
+      <span className="link-back-home"><Link to="/">Retourner sur la page d’accueil</Link></span>
     </div>
   );
 }

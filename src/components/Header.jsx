@@ -17,6 +17,9 @@ function Header() {
           <li className="menu-list-item">
           <Link to="/Apropos">A Propos</Link>
           </li>
+          <li className="menu-list-item">
+          <Link to="/Details">Details</Link>
+          </li>
         </ul>
       </nav>
     </header>);

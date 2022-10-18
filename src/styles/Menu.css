@@ -26,14 +26,14 @@
     color: #FF6060
 }
 
-.menu-list-item::before {
-    content: "";
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    top: 32px;
-    left: 0;
-    background-color: #FF6060;
+.menu-list-item a:hover::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        top: 32px;
+        left: 0;
+        background-color: #FF6060;
 }
 
 @media screen and (max-width: 480px){

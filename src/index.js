@@ -7,6 +7,7 @@ import About from './pages/About';
 import ErrorPage from './pages/Errorpage';
 import reportWebVitals from './reportWebVitals'; 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Details from './pages/Details';
  
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/Apropos",
     element: <About />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Details",
+    element: <Details />,
     errorElement: <ErrorPage />,
   },
 ]);
