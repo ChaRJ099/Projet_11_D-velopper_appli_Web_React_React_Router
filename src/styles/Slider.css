@@ -1,0 +1,45 @@
+.slider-container {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.slider-img {
+    width: 100%;
+}
+
+.slider-prev, .slider-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 96px;
+}
+
+.slider-prev {
+    left: 0;
+}
+
+.slider-next {
+     right: 0;
+}
+
+.slide-num {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}

@@ -3,6 +3,7 @@ import '../styles/Galery.css';
 import JSON from '../datas/logements.JSON';
 import { useState, useEffect } from 'react';
 
+
 function Galery() {
   const [galerie, setGalerie] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
@@ -33,7 +34,7 @@ function Galery() {
     return (
       <section className="gallerie">
           {galerie.map((galerie, index)=> {
-            return <Card cover={galerie.cover} title={galerie.title} key={index}/>
+            return <Card cover={galerie.cover} title={galerie.title} key={index} id={index} />
           })}
       </section>
     );
