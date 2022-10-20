@@ -1,10 +1,13 @@
 import Header from '../components/Header';
 import Slider from '../components/Slider';
+import Tag from '../components/Tag';
 import Rate from '../assets/Rate.png';
+import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
 import JSON from '../datas/logements.JSON';
 import { useState, useEffect } from 'react';
 import "../styles/Details.css";
+import "../styles/Dropdowns.css";
 import { useParams } from 'react-router-dom';
 
 function Details() {
@@ -36,31 +39,40 @@ function Details() {
             <div className="details">
                 <Header />
                 <Slider />
-                <section className="logement-description">
-                    <div className="bloc-title">
-                        <h1 className="logement-title">{logements[index].title}</h1>
-                        <span className="logement-location">{logements[index].location}</span>
-                    </div>
-                    <div className="bloc-tags-rate">
+                <section className="logement-infos">
+                    <div className="bloc-title-tags">
+                        <div className="bloc-title">
+                            <h1 className="logement-title">{logements[index].title}</h1>
+                            <span className="logement-location">{logements[index].location}</span>
+                        </div>
                         <div className="bloc-tags">
-                            <span className="tag">Cosy</span>
-                            <span className="tag">Canal</span>
-                            <span className="tag">Paris 10</span>
-                        </div>                    
+                             {logements[index].tags.map((tag, index)=> {
+                                return  <Tag tag={tag} key={index} id={index} />
+                            })}
+                        </div>
+                    </div>
+                    <div className="bloc-host-rating">
+                        <div className="bloc-host">
+                            <span className="host-name">{logements[index].host.name}</span>
+                            <img className="host-portrait" src={logements[index].host.picture} alt="Rate" />
+                        </div>
                         <div className="bloc-rate">
                             <img src={Rate} alt="Rate" />
                         </div>
-                    </div>
-                    <div className="logement-details">
-                        <div>Description</div>
-                        <div>Equipements</div>
-                    </div>
-            </section>
+                    </div>                        
+                </section> 
+                <section className="details-dropdown">
+                    <Dropdown title={"Description"} key={index} description=<span>{logements[index].description}</span> id={1} />                                 
+                    <Dropdown title={"Equipements"} key={index} description={logements[index].equipments.map((equipment)=> {
+                                return  <span className="equipment-item">{equipment}</span>
+                            })} id={2} />                                 
+                </section>
             <Footer />
             </div>      
         );      
                 
     }
 }
+
   
 export default Details;

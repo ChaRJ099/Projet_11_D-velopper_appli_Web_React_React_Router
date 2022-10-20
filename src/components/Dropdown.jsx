@@ -6,9 +6,9 @@ function Dropdown(props) {
 
   function toogleButton() {
     const dropdownContent = document.querySelector(".dropdown-content-"+props.id);
-    console.log('dropdownContent', dropdownContent);
+    // console.log('dropdownContent', dropdownContent);
     dropdownContent.classList.toggle("dropdown-content--expanded");
-    console.log('toogleButton');
+    // console.log('toogleButton');
   }
 
    
@@ -21,9 +21,7 @@ function Dropdown(props) {
           </button>
           </div>
           
-          <div className={"dropdown-content dropdown-content-"+props.id}>
-            <span>{props.description}</span>
-          </div>
+          <div className={"dropdown-content dropdown-content-"+props.id}>{props.description}</div>
         </div>
       );
     
