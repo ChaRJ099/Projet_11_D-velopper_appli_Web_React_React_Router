@@ -12,19 +12,21 @@ function Dropdown(props) {
   }
 
    
-      return (
-        <div className="dropdown">
-          <div className="dropdown-title-content">
-          <p>{props.title}</p>
-          <button className="button-icon" onClick={toogleButton}>
-            <img src={iconeAngle} className="icone-angle" alt="icone bouton" />
-          </button>
-          </div>
-          
-          <div className={"dropdown-content dropdown-content-"+props.id}>{props.description}</div>
-        </div>
-      );
-    
-    }
-    
-    export default Dropdown;
+  return (
+    <div className="dropdown">
+      <div className="dropdown-title-content">
+      <p>{props.title}</p>
+      <button className="button-icon" onClick={toogleButton}>
+        <img src={iconeAngle} className="icone-angle" alt="icone bouton" />
+      </button>
+      </div>
+      
+      <div className={"dropdown-content dropdown-content-"+props.id}>
+        <span>{props.description}</span>
+      </div>
+    </div>
+  );
+
+}
+
+export default Dropdown;

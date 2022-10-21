@@ -1,32 +1,26 @@
 import React from "react";
-import redstar from "../design/redStar.svg";
-import greystar from "../design/greyStar.svg";
+import redStar from "../assets/red-star.svg";
+import greyStar from "../assets/grey-star.svg";
 
-const Rating = ({ rating }) => {
-  const stars = [1, 2, 3, 4, 5];
+function Rating(props) {
 
-  return (
-    <div className="rating">
-      {/* Loop to display star by rating */}
-      {stars.map((star) =>
-        rating >= star ? (
-          <img
-            key={star.toString()}
-            className="rating__icon"
-            src={redstar}
-            alt=""
-          />
-        ) : (
-          <img
-            key={star.toString()}
-            className="rating__icon"
-            src={greystar}
-            alt=""
-          />
-        )
-      )}
+  const ratings = [1, 2, 3, 4, 5];
+  const stars = Number(props.stars);
+
+return (
+    <div className="bloc-rate">    
+        {
+          ratings.map((rate) => {
+            if (stars >= rate) {
+              return <img src={redStar} alt="etoile rose" />
+            }
+            return <img src={greyStar} alt="etoile grise" />
+
+          })
+        }
     </div>
-  );
+  
+  )
 };
 
 export default Rating;
