@@ -3,3 +3,7 @@ button.button-icon {
     border: none;
     cursor: pointer;
 }
+
+main {
+    width: 1240px;
+}

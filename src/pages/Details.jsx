@@ -38,9 +38,9 @@ function Details() {
     } else {
         // setPictures(logements[index].pictures)
         return (    
-            <div className="details">
+            <main className="details">
                 <Header />
-                <Slider />
+                <Slider slides={logements[ID].pictures}/>
                 <section className="logement-infos">
                     <div className="bloc-title-tags">
                         <div className="bloc-title">
@@ -67,8 +67,8 @@ function Details() {
                                 return <span className="equipment-item" key={equipment[index]}>{equipment}</span>
                             })} />                                 
                 </section>
-            <Footer />
-            </div>      
+                <Footer />
+            </main>      
         );      
                 
     }

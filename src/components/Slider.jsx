@@ -5,41 +5,51 @@ import { useState } from 'react';
 import "../styles/Slider.css";
 import "../styles/helpers.css";
 
-function Slider() {
+function Slider(props) {
 
   const [current, setCurrent] = useState(0);
 
-  const img1 = ("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-1.jpg");
-  const img2 = ("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-2.jpg");
-  const img3 = ("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-3.jpg");
-  const slides = [img1, img2, img3];
 
   const nextSlide = () => {
-    setCurrent(current === slides.length - 1 ? 0 : current + 1);
+    setCurrent(current === props.slides.length - 1 ? 0 : current + 1);
     console.log("next");
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? slides.length - 1 : current - 1);
+    setCurrent(current === 0 ? props.slides.length - 1 : current - 1);
     console.log("prev");
   };
 
-  return (
-      <section className="slider-container">
-        {
-          slides.map((slide) => {
-            return <img src={slide} alt="" className="slider-img" />
-          })
-        }                  
-        <button className="slider-prev button-icon" onClick={prevSlide}>
-              <img src={arrowLeft} alt="" className="slider-prev-icon" />
+  const slideActions = () => {
+    if (props.slides.length > 1 ) {
+      return (
+        <div className="slider-actions">
+          <button className="slider-prev button-icon" onClick={prevSlide}>
+            <img src={arrowLeft} alt="" className="slider-prev-icon" />
           </button>
+          <div className="slide-num">
+              <span>{current+1}/{props.slides.length}</span>
+          </div>
           <button className="slider-next button-icon" onClick={nextSlide}>
               <img src={arrowRight} alt="" className="slider-next-icon" />
           </button>
-          <div className="slide-num">
-              <span>1/4</span>
-          </div>
+        </div>
+      )
+    } 
+  }
+
+  return (
+      <section className="slider">
+        <div className="slider-container">
+          {
+            props.slides.map((slide, index) => {
+              console.log("current, index", current, index)
+              return <img src={props.slides[current]} alt="" className="slider-img" key={index} />
+            })
+          }
+        </div>
+      {slideActions()}
+
     </section>
   )      
 }

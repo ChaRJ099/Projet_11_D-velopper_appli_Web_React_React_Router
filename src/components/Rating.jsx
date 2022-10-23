@@ -10,11 +10,11 @@ function Rating(props) {
 return (
     <div className="bloc-rate">    
         {
-          ratings.map((rate) => {
+          ratings.map((rate, index) => {
             if (stars >= rate) {
-              return <img src={redStar} alt="etoile rose" />
+              return <img src={redStar} alt="etoile rose" key={index} />
             }
-            return <img src={greyStar} alt="etoile grise" />
+            return <img src={greyStar} alt="etoile grise" key={index} />
 
           })
         }
