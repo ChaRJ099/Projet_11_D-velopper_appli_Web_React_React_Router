@@ -36,14 +36,16 @@ function About() {
 
     return (
         <div className="about">
-        <Header />
-        <Slogan bannerUrl={bannerUrl} />
-        <div className="dropdown-list">
-        {about.map((dropdown, index)=> {
-          return  <Dropdown title={dropdown.title} key={index} description={dropdown.description} id={index} />
-        })}
-    </div>
-        <Footer />
+            <Header />
+            <Slogan bannerUrl={bannerUrl} />
+            <section className="dropdown-section">
+                <div className="dropdown-list">
+                    {about.map((dropdown, index)=> {
+                    return  <Dropdown title={dropdown.title} key={index} description={dropdown.description} id={index} />
+                    })}
+                </div>
+            </section>
+            <Footer />
       </div> 
     )
     }

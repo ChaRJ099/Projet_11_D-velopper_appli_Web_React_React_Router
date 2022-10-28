@@ -3,8 +3,16 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
 }
+
+.error404 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+}
+
 .error-num {
     font-family: 'Montserrat';
     font-style: normal;
@@ -38,10 +46,43 @@
     font-size: 18px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     text-decoration-line: underline;
     color: #FF6060;
 }
 
 .link-back-home a:link {
     text-decoration: none;
+    color: #FF6060;
+}
+
+/*******************/
+/**     Mobile    **/
+/*******************/
+
+@media screen and (max-width : 769px)
+{    
+    .error-num {
+        font-size: 96px;
+        line-height: 137px;
+    }
+
+    .error-msg {
+        font-size: 18px;
+        margin-bottom: 120px;
+    }
+
+    .link-back-home {
+        font-size: 14px;
+        text-align: center;
+
+    }
+
+    .error404 {
+        padding: 0 60px;
+        text-align: center;
+    }
+    
+    
+    
 }

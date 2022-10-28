@@ -19,3 +19,13 @@
     flex-direction: row;
     gap: 10px;
 }
+
+@media screen and (max-width : 769px)
+{    
+    .tag {
+        border-radius: 5px;
+        height: 18px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+}

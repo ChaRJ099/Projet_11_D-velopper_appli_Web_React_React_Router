@@ -38,8 +38,10 @@ function Details() {
     } else {
         // setPictures(logements[index].pictures)
         return (    
-            <main className="details">
-                <Header />
+            <>
+            <Header />
+                <main className="details">
+                
                 <Slider slides={logements[ID].pictures}/>
                 <section className="logement-infos">
                     <div className="bloc-title-tags">
@@ -61,14 +63,16 @@ function Details() {
                         <Rating stars={logements[ID].rating} key={logements[ID].rating} />
                     </div>                        
                 </section> 
-                <section className="details-dropdown">
-                    <Dropdown title="Description" description={logements[ID].description} id="1" key="1"/>                                 
-                    <Dropdown title="Equipements" id="2" key="2" description={logements[ID].equipments.map((equipment, index)=> {
+                <section className="logement-dropdowns">
+                    <Dropdown title="Description" description={logements[ID].description} id="5" key="5"/>                                 
+                    <Dropdown title="Equipements" id="6" key="6" description={logements[ID].equipments.map((equipment, index)=> {
                                 return <span className="equipment-item" key={equipment[index]}>{equipment}</span>
                             })} />                                 
                 </section>
+                </main>
                 <Footer />
-            </main>      
+                </>
+                  
         );      
                 
     }

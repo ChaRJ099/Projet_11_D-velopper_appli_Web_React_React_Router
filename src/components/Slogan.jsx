@@ -33,10 +33,13 @@ function Slogan({bannerUrl, title}) {
 
   return (
     
-    <section className="slogan-group">
-      <img src={bannerUrl}/>
-      <div className="slogan-filtre"></div>
+    <section className="slogan-group slogan-about">
       <h1 className="slogan-group-title">{title}</h1>
+      <div className="slogan-filtre">
+        <div className="slogan-backdrop"></div>
+        <img className="slogan-img" src={bannerUrl}/>  
+      </div>
+          
     </section>
   );
 }

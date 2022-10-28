@@ -1,6 +1,7 @@
 .footer {
-    width: 100%;
     max-width: 1440px;
+    width: 100%;
+    min-width: 375px;
     height: 209px;
     background: #000000;
     display: flex;
@@ -21,10 +22,7 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 375px){
-    .footer {
-        margin-top: 45px;
-    }
+@media screen and (max-width: 769px){
 
     .copyright {
         font-size: 12px;

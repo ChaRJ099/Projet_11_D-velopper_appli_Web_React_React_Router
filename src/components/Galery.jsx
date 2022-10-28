@@ -32,10 +32,12 @@ function Galery() {
     return <div>...Chargement de la galerie</div>
   } else {
     return (
-      <section className="gallerie">
+      <section className="galerie">
+        <div className="cards-container">
           {galerie.map((galerie, index)=> {
             return <Card cover={galerie.cover} title={galerie.title} key={index} id={index} />
           })}
+        </div>
       </section>
     );
   }

@@ -11,12 +11,15 @@ function Home() {
   const [bannerUrl] = useState([]);
 
   return (    
-      <div className="home">
-        <Header />
+    <>
+      <Header />
+      <main className="home">
         <Slogan bannerUrl={bannerUrl}/>
         <Galery />
-        <Footer />
-      </div>      
+      </main>  
+      <Footer />
+    </>
+          
   );
 }
 
