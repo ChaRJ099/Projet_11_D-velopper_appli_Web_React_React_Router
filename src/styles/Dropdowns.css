@@ -90,14 +90,20 @@
 
 @media screen and (max-width : 769px)
 {    
-    .dropdown-section {
-        padding: 0 20px;
+    .about .dropdown-section {
+        padding: 0;
     }
+
+    .dropdown .dropdown-title {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
     .dropdown-title-content {
         height: 30px;
     }
 
-    .dropdown-text {
+    .logement-dropdowns .dropdown-text, .logement-dropdowns .equipment-item {
         font-size: 12px;
         line-height: 17px;
     }
@@ -112,7 +118,20 @@
     }
 
     .logement-dropdowns {
-        padding: 0 20px;
-        gap: 20px
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logement-dropdowns .dropdown {
+        width: 100%;
+    }
+
+    .about .dropdown-text {
+        line-height: 17px;
+        font-size: 12px;
+    }
+
+    .about .slogan-group.slogan-about {
+        padding: 0;
     }
 }

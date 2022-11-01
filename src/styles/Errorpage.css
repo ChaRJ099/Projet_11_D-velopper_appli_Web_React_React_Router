@@ -4,6 +4,7 @@
     align-items: center;
     width: 100%;
     max-width: 100%;
+    min-height: 100%;
 }
 
 .error404 {
@@ -34,6 +35,7 @@
     font-weight: 400;
     font-size: 36px;
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     color: #FF6060;
     margin-bottom: 180px;
@@ -51,7 +53,7 @@
     color: #FF6060;
 }
 
-.link-back-home a:link {
+.link-back-home a:link, a:visited {
     text-decoration: none;
     color: #FF6060;
 }
@@ -69,7 +71,7 @@
 
     .error-msg {
         font-size: 18px;
-        margin-bottom: 120px;
+        margin-bottom: 70px;
     }
 
     .link-back-home {
@@ -80,9 +82,7 @@
 
     .error404 {
         padding: 0 60px;
+        margin-bottom: 20px;
         text-align: center;
-    }
-    
-    
-    
+    }    
 }

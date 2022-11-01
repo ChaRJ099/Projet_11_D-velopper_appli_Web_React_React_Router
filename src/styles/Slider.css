@@ -8,7 +8,8 @@
 }
 
 .slider-container {
-    max-width: 1240px;
+    width: 1280px;
+    max-width: 100%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -21,11 +22,6 @@
     width: 100%;
     object-fit: cover;
 }
-
-/* .slider-prev, .slider-next {
-
-    width: 96px;
-} */
 
 .slider-prev {
     left: 0;
@@ -61,7 +57,6 @@
 @media screen and (max-width : 769px)
 {    
     .slider {
-        padding: 0 20px;
         height: 255px;
         min-width: 335px;
     }
@@ -72,9 +67,5 @@
 
     .slider-img {
         min-height: 100%;
-    }
-
-    .slider-actions {
-        width: calc(100% - 40px);
     }
 }

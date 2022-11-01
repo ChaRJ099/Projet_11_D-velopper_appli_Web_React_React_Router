@@ -13,6 +13,10 @@
     padding: 3px 20px 3px 20px;
 }
 
+.tag span {
+    white-space: nowrap;
+}
+
 
 .bloc-tags {
     display: flex;

@@ -15,7 +15,6 @@ function Details() {
     const [logements, setLogement] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
     const [error, setError] = useState();
-    // const [pictures, setPictures] = useState([]);
 
     useEffect(() => {
         fetch(JSON)
@@ -36,7 +35,6 @@ function Details() {
     } else if  (!isLoaded) {
         return <div>...Chargement de la page</div>
     } else {
-        // setPictures(logements[index].pictures)
         return (    
             <>
             <Header />
@@ -66,7 +64,7 @@ function Details() {
                 <section className="logement-dropdowns">
                     <Dropdown title="Description" description={logements[ID].description} id="5" key="5"/>                                 
                     <Dropdown title="Equipements" id="6" key="6" description={logements[ID].equipments.map((equipment, index)=> {
-                                return <span className="equipment-item" key={equipment[index]}>{equipment}</span>
+                                return <span className="equipment-item" key={index}>{equipment}</span>
                             })} />                                 
                 </section>
                 </main>

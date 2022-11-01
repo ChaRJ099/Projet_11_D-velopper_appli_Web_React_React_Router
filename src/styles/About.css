@@ -2,14 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
 }
 
 .dropdown-section {
-    max-width: 1240px;
+    max-width: 100%;
     width: 100%;
     min-width: 335px;
+    padding: 0 100px;
 }
 
 @media screen and (max-width: 769px){
@@ -17,5 +16,4 @@
     .about {
         min-width: 375px;
     }
-
 }

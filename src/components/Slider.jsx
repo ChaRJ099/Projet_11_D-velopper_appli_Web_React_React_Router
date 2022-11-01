@@ -12,12 +12,10 @@ function Slider(props) {
 
   const nextSlide = () => {
     setCurrent(current === props.slides.length - 1 ? 0 : current + 1);
-    console.log("next");
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? props.slides.length - 1 : current - 1);
-    console.log("prev");
   };
 
   const slideActions = () => {
@@ -43,7 +41,6 @@ function Slider(props) {
         <div className="slider-container">
           {
             props.slides.map((slide, index) => {
-              console.log("current, index", current, index)
               return <img src={props.slides[current]} alt="" className="slider-img" key={index} />
             })
           }
