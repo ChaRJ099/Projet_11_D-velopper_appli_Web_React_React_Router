@@ -19,8 +19,10 @@
 }
 
 .slider-img {
-    width: 100%;
+    width: auto;
     object-fit: cover;
+    height: 415px;
+    min-width: 100%;
 }
 
 .slider-prev {
